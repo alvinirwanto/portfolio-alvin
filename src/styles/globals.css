@@ -27,8 +27,9 @@
   box-sizing: border-box;
 }
 
-html, body {
-    scroll-behavior: smooth !important;
+html,
+body {
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -122,6 +123,16 @@ a {
 }
 
 .corner-cut-2 {
-    --edge-size: 2.5rem;
-    clip-path: polygon(100% 0, 100% 100%, var(--edge-size) 100%, 0% calc(100% - var(--edge-size)), 0 0);
-  }
+  --edge-size: 2.5rem;
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    var(--edge-size) 100%,
+    0% calc(100% - var(--edge-size)),
+    0 0
+  );
+}
+
+.custom-color path {
+  stroke: #61DBFB !important;
+}
