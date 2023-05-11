@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "PROJECT SPACE";
+  src: url("/font/project-space/PROJECTSPACE.woff2") format("woff2"),
+    url("/font/project-space/PROJECTSPACE.ttf") format("truetype"),
+    url("/font/project-space/PROJECTSPACE.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-space {
+  font-family: "PROJECT SPACE", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +25,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth !important;
 }
 
 body {
@@ -47,28 +65,63 @@ a {
 }
 
 .bg-hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1px;
-    flex-wrap: wrap;
-    overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .bg-hover span {
-    position: relative;
-    display: block;
-    width: 2.5rem;
-    aspect-ratio: 1/1;
-    background: transparent;
-    z-index: 2;
-    transition: 1.5s;
+  position: relative;
+  display: block;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  background: transparent;
+  z-index: 2;
+  transition: 1.5s;
 }
 
 .bg-hover span:hover {
-    background: #ffffff11;
-    transition: 0s;
+  background: #ffffff11;
+  transition: 0s;
 }
+
+.cut-box {
+  background: linear-gradient(135deg, transparent 35px, #ffffff20 0) top right,
+    linear-gradient(-45deg, transparent 35px, #ffffff20 0) bottom left;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+.cut-box-in {
+  background: linear-gradient(135deg, transparent 35px, #2d2a32 0) top right,
+    linear-gradient(-45deg, transparent 35px, #2d2a32 0) bottom left;
+
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+.corner-cut-1 {
+  --edge-size: 3rem;
+  clip-path: polygon(
+    /* top left 1 */ 0 var(--edge-size),
+    /* top left 2 */ var(--edge-size) 0,
+
+    /* top right */ 100% 0,
+
+    /* bottom right 1 */ 100% calc(100% - var(--edge-size)),
+    /* bottom right 2 */ calc(100% - var(--edge-size)) 100%,
+
+    /* bottom left */ 0 100%
+  );
+}
+
+.corner-cut-2 {
+    --edge-size: 2.5rem;
+    clip-path: polygon(100% 0, 100% 100%, var(--edge-size) 100%, 0% calc(100% - var(--edge-size)), 0 0);
+  }

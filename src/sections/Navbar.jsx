@@ -7,11 +7,6 @@ import React, { useState } from 'react'
 import { IoShareSocialOutline, IoCloseSharp } from 'react-icons/io5'
 import { RiInstagramLine, RiLinkedinFill, RiGithubLine } from 'react-icons/ri'
 
-const montserrat = Montserrat({
-    subsets: ['latin'],
-    weight: ['300', '400', '500', '600', '700', '800']
-})
-
 export default function Navbar() {
 
     const sectionLinks = [
@@ -41,8 +36,8 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={`${montserrat.className} sticky top-0 z-[100] text-sm font-semibold grid grid-cols-2 text-white min-h-[4rem] border-[0.5px] border-white-secondary`}>
-                <div className='bg-white-secondary backdrop-blur-lg'>
+            <nav className='sticky top-0 z-[100] text-sm font-semibold grid grid-cols-2 text-white min-h-[4rem] border-[0.5px] border-white-secondary'>
+                <div className='bg-white-secondary backdrop-blur'>
                     <div className='h-full w-[5rem] bg-white-secondary'>
                         <Image
                             src='/logo.svg'
@@ -53,7 +48,7 @@ export default function Navbar() {
                         />
                     </div>
                 </div>
-                <ul className='grid grid-cols-[1fr_1fr_1fr_1fr_2fr] place-items-center uppercase border-white-secondary'>
+                <ul className='grid grid-cols-[1fr_1fr_1fr_1fr_2fr] backdrop-blur place-items-center uppercase border-white-secondary'>
                     {
                         sectionLinks.map(({ name, link, code }) => (
                             <Link href={link} key={name} className='relative group w-full h-full grid place-items-center border-r-[0.5px] border-white-secondary cursor-pointer'>
@@ -73,7 +68,7 @@ export default function Navbar() {
                 </ul>
             </nav>
 
-            <div className='fixed bottom-10 right-10 z-[50]'>
+            <div className='fixed bottom-10 right-4 z-[50]'>
                 <div className={`${openMenu ? 'flex' : 'hidden'} flex-col gap-3`}>
                     <Link href='https://google.com'>
                         <div className='bg-white-secondary h-[3.5rem] aspect-square grid place-items-center cursor-pointer relative group'>
