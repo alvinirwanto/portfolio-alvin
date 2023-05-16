@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
-// import BIRDS from 'vanta/dist/vanta.birds.min'
+import BIRDS from 'vanta/dist/vanta.birds.min'
 import NET from 'vanta/dist/vanta.net.min'
 
-export default function Background() {
+
+export default function vanta(props) {
     const [vantaEffect, setVantaEffect] = useState(null)
     const myRef = useRef(null)
     useEffect(() => {
@@ -11,16 +12,15 @@ export default function Background() {
                 el: myRef.current,
                 mouseControls: true,
                 touchControls: true,
-                gyroControls: true,
-                forceAnimate: true,
-                minHeight: 200.00,
-                minWidth: 200.00,
+                gyroControls: false,
+                // minHeight: 200.00,
+                // minWidth: 200.00,
                 scale: 1.00,
                 scaleMobile: 1.00,
                 points: 5.00,
                 maxDistance: 19.00,
                 spacing: 12.00,
-                color: 0x61DBFB,
+                color: 0x9BA2FF,
                 backgroundColor: 0x2D2A32
             }))
         }
@@ -28,13 +28,11 @@ export default function Background() {
             if (vantaEffect) vantaEffect.destroy()
         }
     }, [vantaEffect])
+
     return (
-        // <div className='bg-hover'>
-        //     {[...Array(900).keys()].map((i) => (
-        //             <span key={i}></span>
-        //         ))}
-        // </div>
-        <div className="absolute h-full w-full opacity-20" ref={myRef}>
+        <div className='grid grid-cols-2'>
+            <div ref={myRef} className='h-full w-full'>d</div>
+            <div className=''>dsd</div>
         </div>
     )
 }

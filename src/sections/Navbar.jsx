@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 
 import { IoShareSocialOutline, IoCloseSharp } from 'react-icons/io5'
 import { RiInstagramLine, RiLinkedinFill, RiGithubLine } from 'react-icons/ri'
+import { AiOutlineAppstore } from 'react-icons/ai'
 
 export default function Navbar() {
 
@@ -36,19 +37,25 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className='sticky top-0 z-[100] text-sm font-semibold grid grid-cols-2 text-white min-h-[4rem] border-[0.5px] border-white-secondary'>
-                <div className='bg-white-secondary backdrop-blur'>
+            <nav className='sticky top-0 z-[100] text-sm font-semibold grid grid-cols-[3fr_1fr] xl:grid-cols-2 text-white border-[0.5px] border-white-secondary'>
+
+                <div className='bg-white-secondary backdrop-blur max-h-[4rem] md:max-h-full md:min-h-[4rem]'>
                     <div className='h-full w-[5rem] bg-white-secondary'>
                         <Image
                             src='/logo.svg'
                             height={500}
                             width={500}
                             alt='logo'
-                            className='w-full h-full object-contain p-5'
+                            className='w-full h-full object-contain p-3 md:p-3 xl:p-5'
                         />
                     </div>
                 </div>
-                <ul className='grid grid-cols-[1fr_1fr_1fr_1fr_2fr] backdrop-blur place-items-center uppercase border-white-secondary'>
+
+                <div className='flex justify-center items-center text-3xl text-white-primary px-6 backdrop-blur xl:hidden'>
+                    <AiOutlineAppstore />
+                </div>
+
+                <ul className='hidden xl:grid grid-cols-[1fr_1fr_1fr_1fr_2fr] min-h-[4rem] backdrop-blur place-items-center uppercase border-white-secondary'>
                     {
                         sectionLinks.map(({ name, link, code }) => (
                             <Link href={link} key={name} className='relative group w-full h-full grid place-items-center border-r-[0.5px] border-white-secondary cursor-pointer'>
@@ -68,7 +75,9 @@ export default function Navbar() {
                 </ul>
             </nav>
 
-            <div className='fixed bottom-10 right-4 z-[50]'>
+
+            {/* Link Social Media */}
+            <div className='fixed bottom-5 md:bottom-7 xl:bottom-10 right-4 z-[100]'>
                 <div className={`${openMenu ? 'flex' : 'hidden'} flex-col gap-3`}>
                     <Link href='https://google.com'>
                         <div className='bg-white-secondary h-[3.5rem] aspect-square grid place-items-center cursor-pointer relative group'>
@@ -97,7 +106,7 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`group relative ${openMenu ? 'rotate-45 duration-300 ease-in-out bg-blue-primary' : ''} duration-300 ease-in-out bg-white-secondary mt-9 h-[3.5rem] aspect-square grid place-items-center cursor-pointer`}
+                    className={`group relative ${openMenu ? 'rotate-45 duration-300 ease-in-out bg-blue-primary' : ''} duration-300 ease-in-out bg-white-secondary mt-4 xl:mt-9 h-[3.5rem] aspect-square grid place-items-center cursor-pointer`}
                     onClick={() => setOpenMenu(!openMenu)}
                 >
                     {
@@ -115,7 +124,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div className='fixed bottom-10'>
+            <div className='fixed bottom-5 md:bottom-7 xl:bottom-10 z-[100]'>
                 <div className='triangle bg-white-secondary' />
             </div>
         </>

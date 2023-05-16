@@ -9,13 +9,13 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'black-primary' : '#2D2A32',
-                'white-primary' : '#FAFDF6',
-                'white-secondary' : '#ffffff20',
-                'purple-primary' : '#4949E4',
-                'purple-secondary' : '#9BA2FF',
-                'blue-primary' : '#61DBFB',
-                'blue-secondary' : '#61dcfb30',
+                'black-primary': 'var(--black-primary)',
+                'white-primary': 'var(--white-primary)',
+                'white-secondary': 'var(--white-secondary)',
+                'purple-primary': 'var(--purple-primary)',
+                'purple-secondary': 'var(--purple-secondary)',
+                'blue-primary': 'var(--blue-primary)',
+                'blue-secondary': 'var(--blue-secondary)',
             },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

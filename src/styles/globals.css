@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --black-primary: #2d2a32;
+    --white-primary: #fafdf6;
+    --white-secondary: #ffffff20;
+    --purple-primary: #4949e4;
+    --purple-secondary: #9ba2ff;
+    --blue-primary: #61dbfb;
+    --blue-secondary: #61dcfb30;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+  }
+}
+
 @font-face {
   font-family: "PROJECT SPACE";
   src: url("/font/project-space/PROJECTSPACE.woff2") format("woff2"),
@@ -93,15 +110,23 @@ a {
 }
 
 .cut-box {
-  background: linear-gradient(135deg, transparent 35px, #ffffff20 0) top right,
-    linear-gradient(-45deg, transparent 35px, #ffffff20 0) bottom left;
+  background: linear-gradient(
+        135deg,
+        transparent 35px,
+        var(--white-secondary) 0
+      )
+      top right,
+    linear-gradient(-45deg, transparent 35px, var(--white-secondary) 0) bottom
+      left;
   background-size: 100% 50%;
   background-repeat: no-repeat;
 }
 
 .cut-box-in {
-  background: linear-gradient(135deg, transparent 35px, #2d2a32 0) top right,
-    linear-gradient(-45deg, transparent 35px, #2d2a32 0) bottom left;
+  background: linear-gradient(135deg, transparent 35px, var(--black-primary) 0)
+      top right,
+    linear-gradient(-45deg, transparent 35px, var(--black-primary) 0) bottom
+      left;
 
   background-size: 100% 50%;
   background-repeat: no-repeat;
@@ -123,7 +148,7 @@ a {
 }
 
 .corner-cut-2 {
-  --edge-size: 2.5rem;
+  --edge-size: 1.5rem;
   clip-path: polygon(
     100% 0,
     100% 100%,
@@ -133,6 +158,11 @@ a {
   );
 }
 
+.corner-cut-3 {
+    --edge-size: 2.5rem;
+    clip-path: polygon(100% 0, 100% calc(100% - var(--edge-size)), calc(100% - var(--edge-size)) 100%, 0 100%, 0 0);
+}
+
 .custom-color path {
-  stroke: #61DBFB !important;
+  stroke: var(--blue-primary) !important;
 }

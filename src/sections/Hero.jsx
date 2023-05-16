@@ -5,16 +5,17 @@ import Background from '../components/Background'
 export default function Hero() {
     return (
         <section className='relative w-full h-[calc(100vh_-_9rem)] flex justify-center items-center'>
-            <Background />
+            {/* <Background /> */}
 
             <div className='text-white z-10'>
                 <div className='flex justify-start items-center gap-4'>
-                    <p className='text-2xl min-w-[15rem]'>Hello, my name is</p>
-                    <div className='bg-white-secondary w-[50%] h-[1px]' />
+                    <p className='text-base md:text-2xl md:min-w-[15rem]'>Hello, my name is</p>
+                    <div className='bg-white-secondary w-[40%] md:w-[50%] h-[1px]' />
                 </div>
-                <h2 className='text-7xl font-semibold pt-[3rem] pb-4 font-space uppercase'>Alvin Irwanto.</h2>
-                <p className='text-2xl text-right'>I'm a
-                    <span className='font-semibold text-4xl text-blue-primary'> Frontend Web Developer</span>
+                
+                <h2 className='text-[2.3rem] leading-[3rem] md:text-7xl font-semibold pt-[3rem] pb-4 font-space uppercase'>Alvin Irwanto.</h2>
+                <p className='text-base md:text-2xl text-right'>I'm a
+                    <span className='font-semibold text-2xl md:text-4xl text-blue-primary'> Frontend Web Developer</span>
                     <br /> but I can do the
                     <span className='font-semibold text-blue-primary'> UI/UX Design</span> too.
                 </p>

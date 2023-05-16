@@ -37,10 +37,12 @@ const techs = [
     },
     {
         link: '/logo/nextjs-dark.png',
+        link2: '/logo/nextjs.png',
         name: 'next js'
     },
     {
         link: '/logo/github-dark.png',
+        link2: '/logo/github.png',
         name: 'github'
     },
     {
@@ -59,43 +61,55 @@ export default function About() {
             <div className='text-white-primary relative grid grid-cols-4'>
                 {/* <Background /> */}
 
+                <div className='mt-9 md:mt-0 px-3 xl:px-[3rem] flex flex-col justify-end col-start-1 col-end-5 md:col-end-4 grid-rows-1 row-start-2 xl:row-start-1'>
 
-                <div className='px-[3rem] flex flex-col justify-end col-start-1 col-end-4 grid-rows-1 row-start-1'>
-                    <div className='flex justify-start items-center gap-8'>
-                        <h2 className='text-5xl font-semibold uppercase font-space'>About Me</h2>
-                        <div className='bg-white-primary w-[35%] h-[2px] z-[20]' />
+                    <div className='flex justify-start items-center gap-2 md:gap-8'>
+                        <h2 className='text-3xl md:text-5xl font-semibold uppercase font-space'>About Me</h2>
+                        <div className='bg-white-primary w-[50%] md:w-[35%] h-[2px] z-[20]' />
                     </div>
 
-                    <div className='indent-[3rem] text-xl mt-8 text-justify max-w-[60%]'>
+                    <div className='indent-[3rem] text-base md:text-xl mt-8 text-justify xl:max-w-[60%]'>
                         <p>Hi! I am a person who love challenges and learn something new, especially in web development.
                             I have a previledge to worked at several space, such as co-working space, university, and a start up. My main focus these days is creating website, that not only beautiful in look, but also have a beautiful performance in it. So those website will not only make me happy, but also the client happy.</p>
                     </div>
                 </div>
 
-                <div className="relative flex justify-center items-center col-start-3 col-end-5 grid-rows-1 row-start-1 w-full h-[75vh] corner-cut-1 overflow-hidden bg-white-secondary">
+                <div className="relative flex justify-center items-center col-start-1 md:col-start-2 xl:col-start-3 col-end-5 grid-rows-1 row-start-1 w-full h-[50vh] xl:h-[75vh] mb-[3rem] xl:mb-0 corner-cut-1 overflow-hidden bg-white-secondary">
                     {/* <img src="/Alvin_Irwanto.jpg" className='object-cover w-full h-full' alt="" /> */}
                 </div>
             </div>
 
 
-            <div className="grid grid-cols-4 mt-[20rem] text-white">
-                <div className='col-start-1 col-end-3 grid-rows-1 row-start-1 text-xl mb-9'>
+            <div className="grid grid-cols-4 mt-[10rem] xl:mt-[20rem] text-white">
+                <div className='col-start-1 col-end-4 md:col-end-3 grid-rows-1 row-start-1 text-base md:text-xl mb-9'>
                     <p>Here a few technologies  i've been working recently</p>
                 </div>
 
                 <div className='col-start-1 col-end-4 text-xl'>
-                    <div className='grid grid-cols-3 border-[1px] border-white-secondary'>
+                    <div className='grid grid-cols-3 backdrop-blur-sm border-[1px] border-white-secondary'>
                         {
                             techs.map((tech, i) => (
                                 <div key={i} className='group border-r-[1px] border-b-[1px] border-white-secondary py-8 flex justify-center items-center relative grayscale hover:grayscale-0 cursor-crosshair'>
                                     <Image
-                                        className='w-[3rem] aspect-square'
+                                        className={`w-8 md:w-[3rem] aspect-square ${tech.name === 'next js' || tech.name === 'github' ? 'group-hover:hidden' : ''}`}
                                         height={500}
                                         width={500}
                                         src={tech.link}
                                     />
+
+                                    {
+                                        tech.name === 'next js' || tech.name === 'github' ?
+                                            <Image
+                                                className='w-8 md:w-[3rem] aspect-square hidden group-hover:block'
+                                                height={500}
+                                                width={500}
+                                                src={tech.link2}
+                                            /> : ''
+
+                                    }
+
                                     <div className="absolute left-0 bottom-0 w-full h-0 bg-white-primary -z-10 duration-300 ease-in-out group-hover:h-full group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out"></div>
-                                    <span className='absolute bottom-2 left-2 text-xs uppercase group-hover:text-black-primary group-hover:font-semibold'>{tech.name}</span>
+                                    <span className='absolute bottom-[1px] md:bottom-2 md:left-2 text-[9px] md:text-xs uppercase group-hover:text-black-primary group-hover:font-semibold'>{tech.name}</span>
                                 </div>
                             ))
                         }
@@ -103,7 +117,7 @@ export default function About() {
 
                     <div className='bg-black-primary h-4'></div>
 
-                    <div className='corner-cut-2 w-full h-[6.5rem] bg-white-primary relative flex justify-center items-center'>
+                    <div className='corner-cut-2 w-full h-[4rem] xl:h-[6.5rem] bg-white-primary relative flex justify-center items-center'>
                         <div className='absolute corner-cut-2 w-[99.9%] h-[99%] bg-black-primary'>
                             <div className='w-full h-full bg-white-secondary'></div>
                         </div>
@@ -111,10 +125,10 @@ export default function About() {
                 </div>
             </div>
 
-            <div className='grid grid-cols-2 my-[7rem]'>
-                <div className='border-r-[1px] border-white-primary h-[80vh] flex flex-col gap-3 justify-end items-end'>
+            <div className='grid grid-cols-2 my-[5rem] md:my-[7rem]'>
+                <div className='border-r-[1px] border-white-primary h-[50vh] xl:h-[80vh] flex flex-col gap-3 justify-end items-end'>
                     {[...Array(5).keys()].map((i) => (
-                        <div className='w-5 aspect-square bg-blue-primary mr-4'></div>
+                        <div key={i} className='w-5 aspect-square bg-blue-primary mr-4'></div>
                     ))}
                 </div>
 
