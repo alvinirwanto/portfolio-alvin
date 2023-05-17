@@ -6,6 +6,10 @@ import { RiExternalLinkLine } from 'react-icons/ri'
 import { MdKeyboardArrowDown, MdOutlinePlayArrow } from 'react-icons/md'
 import { GrCertificate } from 'react-icons/gr'
 
+import * as Accordion from '@radix-ui/react-accordion'
+import { ChevronDownIcon } from '@radix-ui/react-icons';
+import classNames from 'classnames'
+
 export default function Experience() {
     const [selected, setSelected] = useState(0)
 
@@ -107,25 +111,50 @@ export default function Experience() {
         },
     ]
 
-    const AccordionItem = ({ header, ...rest }) => (
-        <Item
-            {...rest}
-            header={
-                <>
-                    {header}
-                    <MdKeyboardArrowDown className={styles.chevron} />
-                </>
-            }
-            className={styles.item}
-            buttonProps={{
-                className: ({ isEnter }) =>
-                    `${styles.itemBtn} ${isEnter && styles.itemBtnExpanded}`
-            }}
-            contentProps={{ className: styles.itemContent }}
-            panelProps={{ className: styles.itemPanel }}
-        />
-    );
+    const AccordionItem = React.forwardRef(({ children, className, ...props }, forwardedRef) => (
+        <Accordion.Item
+            className={classNames(
+                'mt-px overflow-hidden first:mt-0 focus-within:relative focus-within:z-10',
+                className
+            )}
+            {...props}
+            ref={forwardedRef}
+        >
+            {children}
+        </Accordion.Item>
+    ));
 
+    const AccordionTrigger = React.forwardRef(({ children, className, ...props }, forwardedRef) => (
+        <Accordion.Header className="flex text-base py-4 px-3 bg-white-secondary data-[state=open]:border-l-[3px] data-[state=open]:border-blue-primary data-[state=open]:bg-transparent data-[state=open]:bg-gradient-to-r data-[state=open]:from-white-secondary data-[state=open]:to-transparent">
+            <Accordion.Trigger
+                className={classNames(
+                    'group flex justify-between items-center w-full',
+                    className
+                )}
+                {...props}
+                ref={forwardedRef}
+            >
+                {children}
+                <ChevronDownIcon
+                    className="ease-[cubic-bezier(0.87,_0,_0.13,_1)] scale-105 transition-transform duration-300 group-data-[state=open]:rotate-180"
+                    aria-hidden
+                />
+            </Accordion.Trigger>
+        </Accordion.Header>
+    ));
+
+    const AccordionContent = React.forwardRef(({ children, className, ...props }, forwardedRef) => (
+        <Accordion.Content
+            className={classNames(
+                'data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden',
+                className
+            )}
+            {...props}
+            ref={forwardedRef}
+        >
+            <div className="py-[15px] px-3">{children}</div>
+        </Accordion.Content>
+    ));
 
     return (
         <section className='py-[5rem] text-white-primary'>
@@ -135,7 +164,7 @@ export default function Experience() {
                     <div className='bg-white-primary w-[25%] h-[2px] z-[20]' />
                 </div>
 
-
+                {/* =============== Deckstop =============== */}
                 <div className="hidden md:grid grid-cols-1 md:grid-cols-[3fr_8fr] xl:grid-cols-[2fr_8fr] gap-2 xl:gap-[3rem] mt-[5rem]">
 
                     <ul className="exp-slider relative h-max before:absolute before:left-0 before:content-[''] before:h-full before:w-[3px] before:bg-white-secondary">
@@ -186,7 +215,51 @@ export default function Experience() {
 
 
                 {/* ============== Mobile ================= */}
-                <div className='!text-white-primary md:hidden'>
+                <div className='md:hidden mt-10'>
+                    <Accordion.Root type="single" defaultValue="item-1" collapsible>
+                        {
+                            experiences.map((experience, i) => (
+                                <AccordionItem key={i} value={`item-${i + 1}`}>
+                                    <AccordionTrigger onClick={() => setSelected(i)} >
+                                        <span>{experience.name}</span>
+                                    </AccordionTrigger>
+
+                                    <AccordionContent>
+                                        <div className="exp-details h-full w-full mb-[3rem]">
+                                            <div className="exp-details-position">
+                                                <h3 className='text-xl md:text-2xl font-semibold'>
+                                                    <span>{experiences[selected].role}</span>
+                                                    <span className='exp-details-position-company text-blue-primary'>
+                                                        &nbsp;@&nbsp;
+                                                        <Link
+                                                            className='link'
+                                                            target='_blank'
+                                                            href={experiences[selected].url}
+                                                        >
+                                                            {experiences[selected].name}
+                                                        </Link>
+                                                    </span>
+                                                </h3>
+
+                                                <p className="exp-details-range mb-6 text-sm md:text-base">
+                                                    {experiences[selected].start} - {experiences[selected].end}
+                                                </p>
+
+                                                <ul className="exp-details-list flex flex-col gap-6 overflow-hidden">
+                                                    {experiences[selected].shortDescription.map((description, i) => (
+                                                        <li key={i} className='grid grid-cols-[1rem_90%] gap-4'>
+                                                            <MdOutlinePlayArrow className='text-blue-primary text-2xl' />
+                                                            <div className='exp-details-list-item break-words text-sm md:text-lg'>{description}</div>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            ))
+                        }
+                    </Accordion.Root>
                 </div>
 
 
@@ -230,7 +303,7 @@ export default function Experience() {
             <div className='grid grid-cols-4 px-0'>
                 <div></div>
                 <div></div>
-                <div className='border-r-[1px] border-white-primary h-[5rem] md:h-[50vh] flex flex-col gap-3 justify-end items-end'>
+                <div className='border-r-[1px] border-white-primary h-[50vh] xl:h-[80vh] flex flex-col gap-3 justify-end items-end'>
                     {[...Array(5).keys()].map((i) => (
                         <div key={i} className='w-5 aspect-square bg-blue-primary mr-4'></div>
                     ))}

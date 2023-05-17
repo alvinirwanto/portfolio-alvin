@@ -159,8 +159,14 @@ a {
 }
 
 .corner-cut-3 {
-    --edge-size: 2.5rem;
-    clip-path: polygon(100% 0, 100% calc(100% - var(--edge-size)), calc(100% - var(--edge-size)) 100%, 0 100%, 0 0);
+  --edge-size: 2.5rem;
+  clip-path: polygon(
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    calc(100% - var(--edge-size)) 100%,
+    0 100%,
+    0 0
+  );
 }
 
 .custom-color path {
