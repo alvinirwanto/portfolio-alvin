@@ -3,8 +3,7 @@ import About from '@/sections/About'
 import Experience from '@/sections/Experience'
 import Hero from '@/sections/Hero'
 import Navbar from '@/sections/Navbar'
-import Project from '@/sections/Project'
-import Vanta from '@/sections/Vanta'
+import Work from '@/sections/Work'
 
 import { Inter, Raleway, JetBrains_Mono, Montserrat } from 'next/font/google'
 
@@ -34,7 +33,7 @@ export default function Home() {
                     <Hero />
                     <About />
                     <Experience />
-                    <Project />
+                    <Work />
                 </div>
             </div>
 
