@@ -101,8 +101,8 @@ export default function About() {
                                         tech.name === 'next js' || tech.name === 'github' ?
                                             <Image
                                                 className='w-8 md:w-[3rem] aspect-square hidden group-hover:block'
-                                                height={500}
-                                                width={500}
+                                                height={300}
+                                                width={300}
                                                 src={tech.link2}
                                             /> : ''
 

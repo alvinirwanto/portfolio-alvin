@@ -29,7 +29,6 @@ export default function Home() {
                     <div className='h-full w-[1px] z-[-2] bg-white-secondary absolute top-0 right-[50%]' />
                     <div className='h-full w-[1px] z-[-2] bg-white-secondary absolute top-0 right-[75%]' />
 
-                    {/* <Vanta /> */}
                     <Hero />
                     <About />
                     <Experience />
