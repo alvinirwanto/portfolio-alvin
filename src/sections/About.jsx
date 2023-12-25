@@ -74,8 +74,9 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="relative flex justify-center items-center col-start-1 md:col-start-2 xl:col-start-3 col-end-5 grid-rows-1 row-start-1 w-full h-[50vh] xl:h-[75vh] mb-[3rem] xl:mb-0 corner-cut-1 overflow-hidden bg-white-secondary">
-                    {/* <img src="/Alvin_Irwanto.jpg" className='object-cover w-full h-full' alt="" /> */}
+                <div className="group relative flex justify-center items-center col-start-1 md:col-start-2 xl:col-start-3 col-end-5 grid-rows-1 row-start-1 w-full h-[50vh] xl:h-[75vh] mb-[3rem] xl:mb-0 corner-cut-1 overflow-hidden bg-white-secondary">
+                    <Image height={500} width={500} src="/Alvin_Irwanto.png" className='object-contain w-full h-full grayscale group-hover:grayscale-0' alt="" />
+                    <div className="absolute top-0 flex justify-center items-center col-start-1 md:col-start-2 xl:col-start-3 col-end-5 grid-rows-1 row-start-1 w-full h-[50vh] xl:h-[75vh] mb-[3rem] xl:mb-0 corner-cut-1 overflow-hidden bg-blue-primary opacity-30 hover:opacity-0 duration-300"></div>
                 </div>
             </div>
 
@@ -126,7 +127,7 @@ export default function About() {
             </div>
 
             <div className='grid grid-cols-2 my-[5rem] md:my-[7rem]'>
-                <div className='border-r-[1px] border-white-primary h-[50vh] xl:h-[80vh] flex flex-col gap-3 justify-end items-end'>
+                <div className='border-r-[1px] border-white-primary h-[30vh] xl:h-[50vh] flex flex-col gap-3 justify-end items-end'>
                     {[...Array(5).keys()].map((i) => (
                         <div key={i} className='w-5 aspect-square bg-blue-primary mr-4'></div>
                     ))}

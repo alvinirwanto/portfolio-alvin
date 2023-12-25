@@ -77,7 +77,7 @@ export default function Navbar() {
 
 
             {/* Link Social Media */}
-            <div className='fixed bottom-5 md:bottom-7 xl:bottom-10 right-4 z-[100]'>
+            <div className='fixed bottom-5 md:bottom-7 xl:bottom-10 right-4 xl:right-20 2xl:right-24 z-[100]'>
                 <div className={`${openMenu ? 'flex' : 'hidden'} flex-col gap-3`}>
                     <Link href='https://google.com'>
                         <div className='bg-white-secondary h-[3.5rem] aspect-square grid place-items-center cursor-pointer relative group'>

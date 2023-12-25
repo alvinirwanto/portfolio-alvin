@@ -164,7 +164,7 @@ export default function Experience() {
                     <div className='bg-white-primary w-[25%] h-[2px] z-[20]' />
                 </div>
 
-                {/* =============== Deckstop =============== */}
+                {/* =============== Dekstop =============== */}
                 <div className="hidden md:grid grid-cols-1 md:grid-cols-[3fr_8fr] xl:grid-cols-[2fr_8fr] gap-2 xl:gap-[3rem] mt-[5rem]">
 
                     <ul className="exp-slider relative h-max before:absolute before:left-0 before:content-[''] before:h-full before:w-[3px] before:bg-white-secondary">
@@ -303,7 +303,7 @@ export default function Experience() {
             <div className='grid grid-cols-4 px-0'>
                 <div></div>
                 <div></div>
-                <div className='border-r-[1px] border-white-primary h-[50vh] xl:h-[80vh] flex flex-col gap-3 justify-end items-end'>
+                <div className='border-r-[1px] border-white-primary h-[30vh] xl:h-[50vh] flex flex-col gap-3 justify-end items-end'>
                     {[...Array(5).keys()].map((i) => (
                         <div key={i} className='w-5 aspect-square bg-blue-primary mr-4'></div>
                     ))}
