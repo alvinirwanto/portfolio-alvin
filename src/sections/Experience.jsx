@@ -27,25 +27,28 @@ export default function Experience() {
             role: "Web Developer",
             url: "https://www.tektik.id",
             start: "January 2023",
-            end: "Present",
+            end: "December 2023",
             shortDescription: [
-                "Created a website for showing the dashboard for client data",
+                "Created frontend of the website based on the UI/UX",
+                "Connected the Frontend and the Backend using API",
+                "Created the backend using NextJS, Prisma, MySQL, Axios, Zustand, and React Hook Form",
+                "Deploying the website to the VM in the server using Docker",
                 "Maintaining and Editing client website that already exist.",
                 "I've also experience managed a small team that includes Frontend Developers, Designer, and Content Writer in Creative Team."
             ],
         },
-        {
-            name: "Instagram",
-            role: "Content Creator",
-            url: "https://www.mxindonesia.com",
-            start: "May 2023",
-            end: "Present",
-            shortDescription: [
-                "Upon graduating in 2021, I began creating content on YouTube, with the aim of enhancing my skills and working with the latest technologies, specifically React and Node.",
-                "Over time, I have developed and shared over 50 projects using React on my channel.",
-                "As a result, my channel has gained a substantial following, with over 11,000 subscribers to date. I have also had the pleasure of collaborating with various brands throughout my journey.",
-            ],
-        },
+        // {
+        //     name: "Instagram",
+        //     role: "Content Creator",
+        //     url: "https://www.mxindonesia.com",
+        //     start: "May 2023",
+        //     end: "Present",
+        //     shortDescription: [
+        //         "Upon graduating in 2021, I began creating content on YouTube, with the aim of enhancing my skills and working with the latest technologies, specifically React and Node.",
+        //         "Over time, I have developed and shared over 50 projects using React on my channel.",
+        //         "As a result, my channel has gained a substantial following, with over 11,000 subscribers to date. I have also had the pleasure of collaborating with various brands throughout my journey.",
+        //     ],
+        // },
         {
             name: "PT Max Solution Indonesia",
             role: "Web Developer [Intern]",
@@ -53,21 +56,23 @@ export default function Experience() {
             start: "April 2022",
             end: "Desember 2022",
             shortDescription: [
-                "Upon graduating in 2021, I began creating content on YouTube, with the aim of enhancing my skills and working with the latest technologies, specifically React and Node.",
-                "Over time, I have developed and shared over 50 projects using React on my channel.",
-                "As a result, my channel has gained a substantial following, with over 11,000 subscribers to date. I have also had the pleasure of collaborating with various brands throughout my journey.",
+                "Created the website using Wordpress based on the UI/UX",
+                "Maintaining and Editing client website that already exist.",
+                "I also created the website using ReactJS and NodeJS",
+                "Deploying the website to the VM in the server using Docker",
+                "And as a intern, i learn more about the latest technology for website"
             ],
         },
         {
-            name: "Perpustakaan UMB",
+            name: "UMB Library",
             role: "Data Entry [Intern]",
             url: "https://lib.mercubuana.ac.id/id",
             start: "January 2022",
             end: "June 2022",
             shortDescription: [
-                "As the elected President of the ACES Departmental Club, I successfully led a team of board members and executive committee members to organize and execute multiple events throughout the year.",
-                "Additionally, I secured sponsorships from reputable brands to support our events.",
-                "Overall, it was a rewarding experience that allowed me to develop my leadership skills while contributing positively to the growth of the organization.",
+                "Help to input the Student thesis file to the system based on the requirement of the library",
+                "Help to maintain the book in the library",
+                "To make my work faster, I create program to semi-automatically input the system using Python"
             ],
         },
         {
@@ -77,9 +82,9 @@ export default function Experience() {
             start: "November 2019",
             end: "November 2020",
             shortDescription: [
-                "Write modern, performant, maintainable code for a diverse array of client and internal projects",
-                "Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify",
-                "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis",
+                "Brainstorming with the designer about how the website look like",
+                "Created the website using Wordpress",
+                "Deploying the website to the server"
             ],
         }
     ];
@@ -162,6 +167,11 @@ export default function Experience() {
                 <div className='flex flex-col xl:flex-row justify-start items-start xl:items-center gap-8'>
                     <h2 className='text-2xl md:text-4xl font-semibold uppercase font-space'>My Experience</h2>
                     <div className='bg-white-primary w-[25%] h-[2px] z-[20]' />
+                </div>
+
+                <div className='grid grid-cols-[2fr_1fr] my-10'>
+                    <p>I am a firm believer in the philosophy of learning by doing, especially when it comes to web development. My approach to mastering this field is a blend of consistent practice, continuous learning, and immediate application of newly acquired knowledge to real-world projects. Until now, I have amassed considerable experience in creating websites and having the opportunities to work with several companies. This hands-on experience in the professional realm has not only honed my technical skills but also enriched my understanding of the industry's dynamics and demands. My journey so far has been both challenging and rewarding, and I look forward to further growth and accomplishments in my career. Below are the highlights of my professional career in the field of web development:</p>
+                    <div></div>
                 </div>
 
                 {/* =============== Dekstop =============== */}
