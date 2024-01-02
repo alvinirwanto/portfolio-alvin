@@ -7,6 +7,21 @@ const works = [
     {
         image: '/work/pd-mercubuana.png',
         title: 'Pangkalan Data Universitas Mercu Buana',
+        review: 'This website serves as a data resource for Universitas Mercu Buana, housing confidential data that is not readily disclosed. It features a robust User Authentication system, designed to assign roles and manage access rights. Additionally, it employs Iframe technology to seamlessly integrate PowerBI, thereby facilitating the display of data in a visually engaging and informative manner.',
+        tech: [
+            'MongoDB',
+            'ExpressJS',
+            'ReactJS',
+            'NodeJS',
+            'Redux'
+        ],
+        linkweb: 'https://pd.mercubuana.ac.id/',
+        linkgit: ''
+    },
+
+    {
+        image: '/work/umbcan.png',
+        title: 'UMB Career & Alumni',
         review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique asperiores magnam amet fugiat possimus facere quos autem vero laudantium, porro laboriosam id ipsa cum voluptatem labore ullam, voluptates, enim modi.',
         tech: [
             'MongoDB',
@@ -18,10 +33,9 @@ const works = [
         linkweb: '',
         linkgit: ''
     },
-
     {
-        image: '/work/pd-mercubuana.png',
-        title: 'Pangkalan Data Universitas Mercu Buana',
+        image: '/work/mx-solution.png',
+        title: 'Portfolio Website MX Solution',
         review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique asperiores magnam amet fugiat possimus facere quos autem vero laudantium, porro laboriosam id ipsa cum voluptatem labore ullam, voluptates, enim modi.',
         tech: [
             'MongoDB',
@@ -33,10 +47,23 @@ const works = [
         linkweb: '',
         linkgit: ''
     },
-
     {
-        image: '/work/pd-mercubuana.png',
-        title: 'Pangkalan Data Universitas Mercu Buana',
+        image: '/work/jch.png',
+        title: 'Portfolio Website Jakarta Creative Hub',
+        review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique asperiores magnam amet fugiat possimus facere quos autem vero laudantium, porro laboriosam id ipsa cum voluptatem labore ullam, voluptates, enim modi.',
+        tech: [
+            'MongoDB',
+            'ExpressJS',
+            'ReactJS',
+            'NodeJS',
+            'Redux'
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+    {
+        image: '/work/furniture.png',
+        title: 'Slicing Website Furniture from Figma Design',
         review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique asperiores magnam amet fugiat possimus facere quos autem vero laudantium, porro laboriosam id ipsa cum voluptatem labore ullam, voluptates, enim modi.',
         tech: [
             'MongoDB',
@@ -78,7 +105,7 @@ export default function Work() {
                                 <div className={`w-full h-full ${i % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-[#61dcfb4b] to-transparent absolute rounded-lg`}></div>
                             </div>
                             <div className={`${i % 2 === 0 ? 'col-start-5 col-end-11 items-end' : 'col-start-1 col-end-7 items-start'} grid-rows-1 row-start-1 flex flex-col gap-4 z-20`}>
-                                <h3 className='text-2xl xl:text-3xl font-semibold'>{work.title}</h3>
+                                <h3 className='text-2xl xl:text-3xl font-semibold max-w-[70%]'>{work.title}</h3>
                                 <p className={`${i % 2 === 0 ? 'corner-cut-2' : 'corner-cut-3'} shadow-2xl bg-white-primary text-black-primary p-6 font-medium text-lg`}>{work.review}</p>
                                 <div className='flex gap-5 font-medium text-lg mt-4 flex-wrap text-blue-primary'>
                                     {
@@ -89,13 +116,21 @@ export default function Work() {
                                 </div>
 
                                 <div className='flex gap-4'>
-                                    <Link href='' target='_blank'>
-                                        <RiGithubLine className='hover:text-blue-primary duration-300 text-3xl' />
-                                    </Link>
+                                    {
+                                        work.linkgit && (
+                                            <Link href='' target='_blank'>
+                                                <RiGithubLine className='hover:text-blue-primary duration-300 text-3xl' />
+                                            </Link>
+                                        )
+                                    }
 
-                                    <Link href='' target='_blank'>
-                                        <RiExternalLinkLine className='hover:text-blue-primary duration-300 text-3xl' />
-                                    </Link>
+                                    {
+                                        work.linkweb && (
+                                            <Link href='' target='_blank'>
+                                                <RiExternalLinkLine className='hover:text-blue-primary duration-300 text-3xl' />
+                                            </Link>
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>
