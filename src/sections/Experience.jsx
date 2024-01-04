@@ -23,9 +23,9 @@ export default function Experience() {
 
     const experiences = [
         {
-            name: "Tektik Group",
+            name: "PT Max Solution Indonesia",
             role: "Web Developer",
-            url: "https://www.tektik.id",
+            url: "https://www.mxindonesia.com",
             start: "January 2023",
             end: "December 2023",
             shortDescription: [
@@ -91,7 +91,7 @@ export default function Experience() {
 
     const certificates = [
         {
-            link: 'https://dicoding.com/certificates/0LZ0161RRP65',
+            link: 'https://dicoding.com/certificates/JLX1GW02NZ72',
             title: 'Belajar Dasar Pemrograman Web',
             course: 'Dicoding',
             date: '13 June 2022 - 13 Juni 2025'

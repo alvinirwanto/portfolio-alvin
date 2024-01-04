@@ -68,7 +68,13 @@ export default function Navbar() {
                         ))
                     }
                     <li className='group relative w-full h-full cursor-pointer'>
-                        <button className='w-full h-full group-hover:text-black-primary duration-300'>MY CV</button>
+                        <Link
+                            target='_blank'
+                            href="Frontend_Web Developer_Alvin Irwanto_2023.pdf"
+                            className='group-hover:text-black-primary duration-300 flex justify-center items-center w-full h-full'
+                        >
+                            MY CV
+                        </Link>
                         <div className="absolute left-0 bottom-0 w-full h-0 bg-white-primary -z-10 duration-300 ease-in-out group-hover:h-full group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out"></div>
                         <span className='absolute bottom-1 right-2 font-mono text-[11px] font-light text-white-primary group-hover:text-black-primary opacity-40'>0110</span>
                     </li>
@@ -79,19 +85,19 @@ export default function Navbar() {
             {/* Link Social Media */}
             <div className='fixed bottom-5 md:bottom-7 xl:bottom-10 right-4 xl:right-20 2xl:right-24 z-[100]'>
                 <div className={`${openMenu ? 'flex' : 'hidden'} flex-col gap-3`}>
-                    <Link href='https://google.com'>
+                    <Link href='https://github.com/alvinirwanto' target='_blank'>
                         <div className='bg-white-secondary h-[3.5rem] aspect-square grid place-items-center cursor-pointer relative group'>
                             <RiGithubLine className='text-blue-primary text-2xl group-hover:text-black-primary duration-300' />
                             <div className="absolute left-0 bottom-0 w-full h-0 bg-blue-primary -z-10 duration-300 ease-in-out group-hover:h-full group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out"></div>
                         </div>
                     </Link>
-                    <Link href='https://google.com'>
+                    <Link href='https://www.linkedin.com/in/alvin-irwanto/' target='_blank'>
                         <div className='bg-white-secondary h-[3.5rem] aspect-square grid place-items-center cursor-pointer relative group'>
                             <RiLinkedinFill className='text-blue-primary text-2xl group-hover:text-black-primary duration-300' />
                             <div className="absolute left-0 bottom-0 w-full h-0 bg-blue-primary -z-10 duration-300 ease-in-out group-hover:h-full group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out"></div>
                         </div>
                     </Link>
-                    <Link href='https://google.com'>
+                    <Link href='https://www.instagram.com/alvinirwanto/' target='_blank'>
                         <div className='bg-white-secondary h-[3.5rem] aspect-square grid place-items-center cursor-pointer relative group'>
                             <RiInstagramLine className='text-blue-primary text-2xl group-hover:text-black-primary duration-300' />
                             <div className="absolute left-0 bottom-0 w-full h-0 bg-blue-primary -z-10 duration-300 ease-in-out group-hover:h-full group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out"></div>

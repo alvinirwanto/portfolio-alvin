@@ -22,27 +22,30 @@ const works = [
     {
         image: '/work/umbcan.png',
         title: 'UMB Career & Alumni',
-        review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique asperiores magnam amet fugiat possimus facere quos autem vero laudantium, porro laboriosam id ipsa cum voluptatem labore ullam, voluptates, enim modi.',
+        review: 'This website provide information about the alumni of Universitas Mercu Buana. It provide content such as Job Vacancy, Event, and other program provide by the campus. In this project, I worked as a Frontend Developer.',
         tech: [
-            'MongoDB',
-            'ExpressJS',
             'ReactJS',
-            'NodeJS',
-            'Redux'
+            'React Bootstrap',
+            'Material UI',
+            'Axios',
+            'React Hook Form'
         ],
-        linkweb: '',
+        linkweb: 'https://umbcan.mercubuana.ac.id/',
         linkgit: ''
     },
     {
         image: '/work/mx-solution.png',
         title: 'Portfolio Website MX Solution',
-        review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique asperiores magnam amet fugiat possimus facere quos autem vero laudantium, porro laboriosam id ipsa cum voluptatem labore ullam, voluptates, enim modi.',
+        review: 'This website used to promote the product of PT Max Solution Indonesia, named MX Solution. This website provide information about the product, how to collaborate with the company, article, also there is a assessment for the client. This website also provide the admin page to handle the submission and control the article and the user.',
         tech: [
-            'MongoDB',
-            'ExpressJS',
+            'NextJS',
             'ReactJS',
-            'NodeJS',
-            'Redux'
+            'Zustand',
+            'TailwindCSS',
+            'Framer Motion',
+            'React Hook Form',
+            'Prisma ORM',
+            'MySQL',
         ],
         linkweb: '',
         linkgit: ''
@@ -50,30 +53,24 @@ const works = [
     {
         image: '/work/jch.png',
         title: 'Portfolio Website Jakarta Creative Hub',
-        review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique asperiores magnam amet fugiat possimus facere quos autem vero laudantium, porro laboriosam id ipsa cum voluptatem labore ullam, voluptates, enim modi.',
+        review: 'This website is also for promoting the Jakarta Creative Hub to the public. It provide some information such as Event, information about the place, and article.',
         tech: [
-            'MongoDB',
-            'ExpressJS',
-            'ReactJS',
-            'NodeJS',
-            'Redux'
+            'Wordpress',
+            'CSS'
         ],
-        linkweb: '',
+        linkweb: 'https://jakartacreativehub.jakarta.go.id/berita/',
         linkgit: ''
     },
     {
         image: '/work/furniture.png',
         title: 'Slicing Website Furniture from Figma Design',
-        review: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique asperiores magnam amet fugiat possimus facere quos autem vero laudantium, porro laboriosam id ipsa cum voluptatem labore ullam, voluptates, enim modi.',
+        review: 'This website is used the train my skill in Frontend development. I get this design from <a href="https://www.arshakir.com/">AR Shakir</a> website, and try to convert it from Figma design to a Website.',
         tech: [
-            'MongoDB',
-            'ExpressJS',
-            'ReactJS',
-            'NodeJS',
-            'Redux'
+            'React JS (Vite)',
+            'TailwindCSS'
         ],
-        linkweb: '',
-        linkgit: ''
+        linkweb: 'https://furniture-shop-nu.vercel.app/',
+        linkgit: 'https://github.com/alvinirwanto/furniture-app-react'
     }
 ]
 
@@ -106,8 +103,8 @@ export default function Work() {
                             </div>
                             <div className={`${i % 2 === 0 ? 'col-start-5 col-end-11 items-end' : 'col-start-1 col-end-7 items-start'} grid-rows-1 row-start-1 flex flex-col gap-4 z-20`}>
                                 <h3 className='text-2xl xl:text-3xl font-semibold max-w-[70%]'>{work.title}</h3>
-                                <p className={`${i % 2 === 0 ? 'corner-cut-2' : 'corner-cut-3'} shadow-2xl bg-white-primary text-black-primary p-6 font-medium text-lg`}>{work.review}</p>
-                                <div className='flex gap-5 font-medium text-lg mt-4 flex-wrap text-blue-primary'>
+                                <p className={`${i % 2 === 0 ? 'corner-cut-2' : 'corner-cut-3'} shadow-2xl bg-white-primary text-black-primary p-6 font-medium text-lg`} dangerouslySetInnerHTML={{ __html: work.review }}></p>
+                                <div className='flex justify-end gap-5 font-medium text-lg mt-4 flex-wrap text-blue-primary max-w-[70%]'>
                                     {
                                         work.tech.map((t, i) => (
                                             <span key={i}>{t}</span>
