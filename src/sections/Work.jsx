@@ -47,7 +47,7 @@ const works = [
             'Prisma ORM',
             'MySQL',
         ],
-        linkweb: '',
+        linkweb: 'https://mxindonesia.com/',
         linkgit: ''
     },
     {
@@ -58,7 +58,7 @@ const works = [
             'Wordpress',
             'CSS'
         ],
-        linkweb: 'https://jakartacreativehub.jakarta.go.id/berita/',
+        linkweb: 'https://jakartacreativehub.jakarta.go.id',
         linkgit: ''
     },
     {

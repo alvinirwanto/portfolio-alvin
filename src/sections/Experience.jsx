@@ -23,7 +23,7 @@ export default function Experience() {
 
     const experiences = [
         {
-            name: "PT Max Solution Indonesia",
+            name: "MX Indonesia",
             role: "Web Developer",
             url: "https://www.mxindonesia.com",
             start: "January 2023",
@@ -50,7 +50,7 @@ export default function Experience() {
         //     ],
         // },
         {
-            name: "PT Max Solution Indonesia",
+            name: "MX Indonesia",
             role: "Web Developer [Intern]",
             url: "https://www.mxindonesia.com",
             start: "April 2022",
