@@ -37,8 +37,10 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className='fixed w-[90%] top-11 z-[100] text-sm font-semibold grid grid-cols-[3fr_1fr] xl:grid-cols-2 text-white border-[0.5px] border-white-secondary'>
+            <div className='fixed top-0 bg-black-primary w-[90%] h-[3rem] z-[100]'></div>
+            <div className='fixed bottom-0 bg-black-primary w-[90%] h-[3rem] z-[100]'></div>
 
+            <nav className='fixed w-[90%] top-[3rem] z-[100] text-sm font-semibold grid grid-cols-[3fr_1fr] xl:grid-cols-2 text-white border-[0.5px] border-white-secondary'>
                 <div className='bg-white-secondary backdrop-blur max-h-[4rem] md:max-h-full md:min-h-[4rem]'>
                     <ScrollLink
                         to='hero'
@@ -99,7 +101,7 @@ export default function Navbar() {
 
 
             {/* Link Social Media */}
-            <div className='fixed bottom-5 md:bottom-7 xl:bottom-10 right-4 xl:right-20 2xl:right-24 z-[100]'>
+            <div className='fixed bottom-5 md:bottom-7 xl:bottom-[3rem] right-4 xl:right-20 2xl:right-24 z-[100]'>
                 <div className={`${openMenu ? 'flex' : 'hidden'} flex-col gap-3`}>
                     <Link href='https://github.com/alvinirwanto' target='_blank'>
                         <div className='bg-white-secondary h-[3.5rem] aspect-square grid place-items-center cursor-pointer relative group'>
@@ -146,7 +148,8 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div className='fixed bottom-5 md:bottom-7 xl:bottom-10 z-[100]'>
+            {/* Triangle */}
+            <div className='fixed bottom-5 md:bottom-7 xl:bottom-[3rem] z-[100]'>
                 <div className='triangle bg-white-secondary' />
             </div>
         </>
