@@ -4,7 +4,7 @@ import Background from '../components/Background'
 
 export default function Hero() {
     return (
-        <section className='relative w-full h-[calc(100vh_-_9rem)] flex justify-center items-center'>
+        <section className='relative w-full h-[calc(100vh_-_9rem)] flex justify-center items-center' name='hero' id='hero'>
             {/* <Background /> */}
 
             <div className='text-white z-10'>

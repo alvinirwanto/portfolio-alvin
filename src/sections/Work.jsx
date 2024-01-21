@@ -71,13 +71,26 @@ const works = [
         ],
         linkweb: 'https://furniture-shop-nu.vercel.app/',
         linkgit: 'https://github.com/alvinirwanto/furniture-app-react'
+    },
+    {
+        image: '/work/youtube-clone.png',
+        title: 'Youtube Clone',
+        review: 'I train my knowledge about web development by create this youtube clone. In this project, I consume the API and turn it into website that ready to use.',
+        tech: [
+            'React JS (Vite)',
+            'Rapid API',
+            'Axios',
+            'TailwindCSS'
+        ],
+        linkweb: 'https://youtube-clone-eight-rho.vercel.app/',
+        linkgit: 'https://github.com/alvinirwanto/youtube-clone'
     }
 ]
 
 export default function Work() {
     return (
-        <section className='text-white-primary px-3 md:px-0 xl:px-[3rem] py-[5rem] relative'>
-            <div className='absolute right-[50%] top-[25%] border-r-[3px] border-white-primary h-[130vh] z-[-1]'></div>
+        <section className='text-white-primary px-3 md:px-0 xl:px-[3rem] pt-[20rem] relative' name='work' id='work'>
+            <div className='absolute right-[50%] top-[10%] border-r-[3px] border-white-primary h-[300vh] z-[-1]'></div>
 
             <div className='flex justify-start items-center gap-8'>
                 <h2 className='text-3xl md:text-4xl font-semibold uppercase font-space'>My Work</h2>
@@ -134,6 +147,18 @@ export default function Work() {
                     ))
                 }
             </div>
+
+            <div className='grid grid-cols-4 pr-[6rem] mt-[10rem]'>
+                <div className='border-r-[1px] border-white-primary h-[30vh] xl:h-[50vh] flex flex-col gap-3 justify-end items-end'>
+                    {[...Array(5).keys()].map((i) => (
+                        <div key={i} className='w-5 aspect-square bg-blue-primary mr-4'></div>
+                    ))}
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
         </section>
     )
 }

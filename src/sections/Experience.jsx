@@ -24,7 +24,7 @@ export default function Experience() {
     const experiences = [
         {
             name: "MX Indonesia",
-            role: "Web Developer",
+            role: "Full-Stack Web Developer",
             url: "https://www.mxindonesia.com",
             start: "January 2023",
             end: "December 2023",
@@ -162,7 +162,7 @@ export default function Experience() {
     ));
 
     return (
-        <section className='py-[5rem] text-white-primary'>
+        <section className='pt-[10rem] text-white-primary' name='experience' id='experience'>
             <div className='px-0 xl:px-[3rem]'>
                 <div className='flex flex-col xl:flex-row justify-start items-start xl:items-center gap-8'>
                     <h2 className='text-2xl md:text-4xl font-semibold uppercase font-space'>My Experience</h2>

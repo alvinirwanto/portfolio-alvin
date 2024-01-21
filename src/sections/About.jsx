@@ -57,7 +57,7 @@ const techs = [
 
 export default function About() {
     return (
-        <section className='py-[5rem]'>
+        <section name="about" id="about" className='py-[5rem]'>
             <div className='text-white-primary relative grid grid-cols-4'>
                 {/* <Background /> */}
 

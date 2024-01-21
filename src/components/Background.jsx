@@ -29,12 +29,7 @@ export default function Background() {
         }
     }, [vantaEffect])
     return (
-        // <div className='bg-hover'>
-        //     {[...Array(900).keys()].map((i) => (
-        //             <span key={i}></span>
-        //         ))}
-        // </div>
-        <div className="absolute h-full w-full opacity-20" ref={myRef}>
+        <div className="fixed top-12 z-1 h-[90vh] w-screen opacity-20" ref={myRef}>
         </div>
     )
 }
