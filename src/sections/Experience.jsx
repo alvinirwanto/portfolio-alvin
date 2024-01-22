@@ -169,8 +169,8 @@ export default function Experience() {
                     <div className='bg-white-primary w-[25%] h-[2px] z-[20]' />
                 </div>
 
-                <div className='grid grid-cols-[2fr_1fr] my-10'>
-                    <p>I am a firm believer in the philosophy of learning by doing, especially when it comes to web development. My approach to mastering this field is a blend of consistent practice, continuous learning, and immediate application of newly acquired knowledge to real-world projects. Until now, I have amassed considerable experience in creating websites and having the opportunities to work with several companies. This hands-on experience in the professional realm has not only honed my technical skills but also enriched my understanding of the industry's dynamics and demands. My journey so far has been both challenging and rewarding, and I look forward to further growth and accomplishments in my career. Below are the highlights of my professional career in the field of web development:</p>
+                <div className='grid grid-cols-1 xl:grid-cols-[2fr_1fr] my-10'>
+                    <p className='text-justify'>I am a firm believer in the philosophy of learning by doing, especially when it comes to web development. My approach to mastering this field is a blend of consistent practice, continuous learning, and immediate application of newly acquired knowledge to real-world projects. Until now, I have amassed considerable experience in creating websites and having the opportunities to work with several companies. This hands-on experience in the professional realm has not only honed my technical skills but also enriched my understanding of the industry's dynamics and demands. My journey so far has been both challenging and rewarding, and I look forward to further growth and accomplishments in my career. Below are the highlights of my professional career in the field of web development:</p>
                     <div></div>
                 </div>
 
@@ -274,7 +274,7 @@ export default function Experience() {
 
 
 
-                <div className='mt-[20vh] md:mt-[20vh] xl:mt-[40vh] mb-[5rem]'>
+                <div className='mt-[20vh] md:mt-[20vh] xl:mt-[30vh] mb-[5rem]'>
                     <div className='flex justify-center items-center gap-8'>
                         <div className='bg-white-primary w-[10%] h-[2px] z-[20]' />
                         <h2 className='text-xl xl:text-2xl font-semibold text-center uppercase font-space'>My Certification</h2>

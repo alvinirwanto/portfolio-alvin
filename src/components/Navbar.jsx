@@ -37,10 +37,10 @@ export default function Navbar() {
 
     return (
         <>
-            <div className='fixed top-0 bg-black-primary w-[90%] h-[3rem] z-[100]'></div>
-            <div className='fixed bottom-0 bg-black-primary w-[90%] h-[3rem] z-[100]'></div>
+            <div className='fixed top-0 bg-black-primary w-full h-[3rem] z-[100]'></div>
+            <div className='fixed bottom-0 bg-black-primary w-full h-[3rem] z-[100]'></div>
 
-            <nav className='fixed w-[90%] top-[3rem] z-[100] text-sm font-semibold grid grid-cols-[3fr_1fr] xl:grid-cols-2 text-white border-[0.5px] border-white-secondary'>
+            <nav className='fixed w-[95%] xl:w-[90%] top-[3rem] z-[100] text-sm font-semibold grid grid-cols-[3fr_1fr] xl:grid-cols-2 text-white border-[0.5px] border-white-secondary'>
                 <div className='bg-white-secondary backdrop-blur max-h-[4rem] md:max-h-full md:min-h-[4rem]'>
                     <ScrollLink
                         to='hero'
@@ -48,7 +48,7 @@ export default function Navbar() {
                         activeClass='active'
                         spy={true}
                     >
-                        <div className='h-full w-[5rem] bg-white-secondary cursor-pointer'>
+                        <div className='h-full w-[6.1rem] xl:w-[5rem] bg-white-secondary cursor-pointer'>
                             <Image
                                 src='/logo.svg'
                                 height={500}
