@@ -94,7 +94,7 @@ export default function Experience() {
             link: 'https://dicoding.com/certificates/JLX1GW02NZ72',
             title: 'Belajar Dasar Pemrograman Web',
             course: 'Dicoding',
-            date: '13 June 2022 - 13 Juni 2025'
+            date: '13 June 2022 - 13 June 2025'
         },
         {
             link: 'https://dicoding.com/certificates/0LZ0161RRP65',
@@ -106,7 +106,7 @@ export default function Experience() {
             link: 'https://dicoding.com/certificates/6RPND7VDRZ2M',
             title: 'Belajar Membuat Front-End Web untuk Pemula',
             course: 'Dicoding',
-            date: '21 Juli 2022 - 21 Juli 2025'
+            date: '21 July 2022 - 21 July 2025'
         },
         {
             link: 'https://dicoding.com/certificates/L4PQ4Y964XO1',

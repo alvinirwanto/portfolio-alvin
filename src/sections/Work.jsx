@@ -90,7 +90,7 @@ const works = [
 export default function Work() {
     return (
         <section className='text-white-primary px-3 md:px-0 xl:px-[3rem] pt-[20rem] relative' name='work' id='work'>
-            <div className='absolute right-[50%] top-[10%] border-r-[3px] border-white-primary h-[300vh] z-[-1]'></div>
+            <div className='absolute right-[50%] top-[20%] border-r-[3px] border-white-primary h-[300vh] z-[-1]'></div>
 
             <div className='flex justify-start items-center gap-8'>
                 <h2 className='text-3xl md:text-4xl font-semibold uppercase font-space'>My Work</h2>
