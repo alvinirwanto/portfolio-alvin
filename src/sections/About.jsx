@@ -57,18 +57,18 @@ const techs = [
 
 export default function About() {
     return (
-        <section name="about" id="about" className='py-[5rem]'>
+        <section name="about" id="about" className='xl:py-[5rem]'>
             <div className='text-white-primary relative grid grid-cols-4'>
                 {/* <Background /> */}
 
                 <div className='mt-9 md:mt-0 px-3 xl:px-[3rem] flex flex-col justify-end col-start-1 col-end-5 md:col-end-4 grid-rows-1 row-start-2 xl:row-start-1'>
 
                     <div className='flex justify-start items-center gap-2 md:gap-8'>
-                        <h2 className='text-3xl md:text-5xl font-semibold uppercase font-space'>About Me</h2>
+                        <h2 className='text-3xl md:text-4xl xl:text-5xl font-semibold uppercase font-space'>About Me</h2>
                         <div className='bg-white-primary w-[50%] md:w-[35%] h-[2px] z-[20]' />
                     </div>
 
-                    <div className='indent-[3rem] text-base md:text-xl mt-8 text-justify xl:max-w-[60%]'>
+                    <div className='indent-[3rem] text-base md:text-lg xl:text-xl mt-8 text-justify xl:max-w-[60%]'>
                         <p>Hi! I am a person who love challenges and learn something new, especially in web development.
                             I have a previledge to worked at several space, such as co-working space, university, and a start up. My main focus these days is creating website, that not only beautiful in look, but also have a beautiful performance in it. So those website will not only make me happy, but also the client happy.</p>
                     </div>
@@ -81,8 +81,8 @@ export default function About() {
             </div>
 
 
-            <div className="grid grid-cols-4 mt-[10rem] xl:mt-[15rem] text-white">
-                <div className='col-start-1 col-end-4 md:col-end-3 grid-rows-1 row-start-1 text-base md:text-xl mb-9'>
+            <div className="grid grid-cols-4 mt-[5rem] xl:mt-[15rem] text-white">
+                <div className='col-start-1 col-end-4 md:col-end-3 grid-rows-1 row-start-1 text-base md:text-lg xl:text-xl mb-9'>
                     <p>Here a few technologies  i've been working recently</p>
                 </div>
 

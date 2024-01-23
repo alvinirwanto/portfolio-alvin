@@ -40,26 +40,26 @@ const otherWorks = [
 
 export default function OtherWork() {
     return (
-        <div className='mt-[10rem] mb-[5rem]'>
+        <div className='mt-[10rem]'>
             <div className='flex justify-center items-center gap-8'>
                 <div className='bg-white-primary w-[10%] h-[2px] z-[20]' />
-                <h2 className='text-xl xl:text-2xl font-semibold text-center uppercase font-space'>Other Noteworthy Project</h2>
+                <h2 className='text-base md:text-xl xl:text-2xl font-semibold text-center uppercase font-space'>Other Noteworthy Project</h2>
                 <div className='bg-white-primary w-[10%] h-[2px] z-[20]' />
             </div>
 
             <div className='w-full h-full mt-[5rem] relative'>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 p-5 h-max'>
+                <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:p-5 h-max'>
                     {
                         otherWorks.map((work, i) => (
-                            <div key={i} className='h-[20rem] backdrop-blur-[10px] corner-cut-3 hover:mt-[-1rem] hover:duration-300 duration-300 flex flex-col gap-8 w-full bg-white-secondary p-8'>
+                            <div key={i} className='h-[18rem] md:h-[20rem] backdrop-blur-[10px] corner-cut-3 hover:mt-[-1rem] hover:duration-300 duration-300 flex flex-col gap-5 xl:gap-8 w-full bg-white-secondary p-8'>
                                 <div className='flex items-center justify-between text-white-primary'>
-                                    <FaRegFolder className='text-blue-primary text-4xl' />
+                                    <FaRegFolder className='text-blue-primary text-2xl xl:text-4xl' />
                                     <div className='flex gap-4'>
                                         {
                                             work.linkgit && (
                                                 <Link href='' target='_blank'>
-                                                    <FiGithub className='hover:text-blue-primary duration-300 text-2xl' />
+                                                    <FiGithub className='hover:text-blue-primary duration-300 text-xl md:text-2xl' />
                                                 </Link>
                                             )
                                         }
@@ -67,7 +67,7 @@ export default function OtherWork() {
                                         {
                                             work.linkweb && (
                                                 <Link href='' target='_blank'>
-                                                    <FiExternalLink className='hover:text-blue-primary duration-300 text-2xl' />
+                                                    <FiExternalLink className='hover:text-blue-primary duration-300 text-xl md:text-2xl' />
                                                 </Link>
                                             )
                                         }
@@ -75,12 +75,12 @@ export default function OtherWork() {
                                 </div>
 
                                 <div className='flex flex-col gap-4'>
-                                    <h4 className='text-2xl font-semibold h-[4rem]'>{work.title}</h4>
-                                    <p className='opacity-60 text-sm' dangerouslySetInnerHTML={{ __html: work.review }}></p>
-                                    <div className='w-full flex gap-3 text-blue-primary'>
+                                    <h4 className='text-base md:text-lg xl:text-2xl font-semibold h-[3rem] xl:h-[4rem]'>{work.title}</h4>
+                                    <p className='opacity-60 text-xs md:text-sm text-justify' dangerouslySetInnerHTML={{ __html: work.review }}></p>
+                                    <div className='w-full flex gap-2 xl:gap-3 text-blue-primary'>
                                         {
                                             work.tech.map((t, i) => (
-                                                <span key={i} className='text-sm'>{t}</span>
+                                                <span key={i} className='text-xs xl:text-sm'>{t}</span>
                                             ))
                                         }
                                     </div>
