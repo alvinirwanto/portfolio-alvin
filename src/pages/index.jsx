@@ -22,9 +22,15 @@ export default function Home() {
             <div className="w-[95%] h-[95vh] md:w-[90%] xl:h-[90vh] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                 <Navbar />
                 <div className='relative'>
-                    <div className='h-full w-[1px] z-[-2] bg-white-secondary absolute top-0 right-[25.05%]' />
+                    {/* <div className='h-full w-[1px] z-[-2] bg-white-secondary absolute top-0 right-[25.05%]' />
                     <div className='h-full w-[1px] z-[-2] bg-white-secondary absolute top-0 right-[50%]' />
-                    <div className='h-full w-[1px] z-[-2] bg-white-secondary absolute top-0 right-[75%]' />
+                    <div className='h-full w-[1px] z-[-2] bg-white-secondary absolute top-0 right-[75%]' /> */}
+
+                    <div className='grid grid-cols-4 absolute top-0 z-[-2] h-full w-full'>
+                        <div className='border-r-[1px] border-white-secondary h-full'></div>
+                        <div className='border-r-[1px] border-white-secondary h-full'></div>
+                        <div className='border-r-[1px] border-white-secondary h-full'></div>
+                    </div>
 
                     <Hero />
                     <About />

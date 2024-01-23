@@ -29,7 +29,7 @@ export default function Article() {
                 <div className='bg-white-primary w-[25%] h-[2px] z-[20]' />
                 <h2 className='text-2xl md:text-3xl xl:text-4xl font-semibold uppercase font-space'>My Articles</h2>
             </div>
-            <div className='grid grid-cols-1 xl:grid-cols-2 gap-10'>
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-0'>
                 <>
                     {
                         articles?.map((article, i) => (

@@ -7,7 +7,7 @@ export default function Hero() {
         <section className='relative w-full h-[calc(100vh_-_9rem)] flex justify-center items-center' name='hero' id='hero'>
             {/* <Background /> */}
 
-            <div className='text-white z-10'>
+            <div className='text-white z-10 pt-[10rem]'>
                 <div className='flex justify-start items-center gap-4'>
                     <p className='text-base md:text-xl md:min-w-[15rem]'>Hello, my name is</p>
                     <div className='bg-white-secondary w-[40%] md:w-[50%] h-[1px]' />
