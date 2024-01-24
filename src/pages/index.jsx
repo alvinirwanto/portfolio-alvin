@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar'
 import Work from '@/sections/Work'
 
 import { Montserrat } from 'next/font/google'
+import Contact from '@/sections/Contact'
 
 const montserrat = Montserrat({
     subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function Home() {
                     <Experience />
                     <Work />
                     <Article />
+                    <Contact />
                 </div>
             </div>
         </div>

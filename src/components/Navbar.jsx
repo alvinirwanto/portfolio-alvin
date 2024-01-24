@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Link as ScrollLink, Events } from 'react-scroll';
-import React, { useEffect, useState } from 'react'
+import { Link as ScrollLink } from 'react-scroll';
+import React, { useState } from 'react'
 
 import { IoShareSocialOutline, IoCloseSharp } from 'react-icons/io5'
 import { RiInstagramLine, RiLinkedinFill, RiGithubLine } from 'react-icons/ri'
-import { AiOutlineAppstore } from 'react-icons/ai'
 
 export default function Navbar() {
 
