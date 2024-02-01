@@ -49,7 +49,7 @@
 
 html,
 body {
-    padding: 0;
+  padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
@@ -166,6 +166,17 @@ a {
 
 .corner-cut-3 {
   --edge-size: 2.5rem;
+  clip-path: polygon(
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    calc(100% - var(--edge-size)) 100%,
+    0 100%,
+    0 0
+  );
+}
+
+.corner-cut-4 {
+  --edge-size: 1rem;
   clip-path: polygon(
     100% 0,
     100% calc(100% - var(--edge-size)),

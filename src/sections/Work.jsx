@@ -72,14 +72,14 @@ export default function Work() {
                     works.map((work, i) => (
                         <div key={i} className={`grid grid-cols-10 place-items-center ${i % 2 === 0 ? 'text-right' : 'text-left'}`}>
 
-                            <div className={`${i % 2 === 0 ? 'col-start-1 xl:col-start-2 col-end-11 md:col-end-8 xl:col-end-7' : 'col-start-1 md:col-start-4 xl:col-start-5 col-end-11 xl:col-end-10'} md:-mt-[7rem] xl:mt-0 relative md:grid-rows-1 md:row-start-1 bg-white-secondary min-h-[25vh] xl:min-h-[45vh] rounded-lg w-full z-10`}>
+                            <div className={`${i % 2 === 0 ? 'col-start-1 xl:col-start-2 col-end-11 md:col-end-8 xl:col-end-7' : 'col-start-1 md:col-start-4 xl:col-start-5 col-end-11 xl:col-end-10'} md:-mt-[7rem] xl:mt-0 relative md:grid-rows-1 md:row-start-1 bg-white-secondary min-h-[25vh] xl:min-h-[45vh] w-full z-10`}>
                                 <Image
                                     height={700}
                                     width={700}
                                     src={work.image}
-                                    className='object-cover w-full h-full absolute bg-clip-content p-4 xl:p-8 border-2 border-blue-primary rounded-lg'
+                                    className='object-cover w-full h-full absolute bg-clip-content p-4 xl:p-8 border-2 border-blue-primary'
                                 />
-                                <div className={`w-full h-full ${i % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-[#61dcfb4b] to-transparent absolute rounded-lg`}></div>
+                                <div className={`w-full h-full ${i % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-[#61dcfb4b] to-transparent absolute`}></div>
                             </div>
 
                             <div className={`${i % 2 === 0 ? 'col-start-2 col-end-11 md:col-start-4 xl:col-start-5 md:col-end-11 items-end' : 'col-start-1 col-end-10 xl:col-start-1 md:col-end-8 xl:col-end-7 items-start'} md:grid-rows-1 md:row-start-1 flex flex-col gap-2 xl:gap-4 z-20 mt-8 xl:mt-0`}>

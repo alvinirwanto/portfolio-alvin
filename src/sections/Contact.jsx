@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import { slideIn, showText, staggerAnimation, staggerItems } from '../../utils/motion'
-// import TektikLogo from '../public/horizontal/tektik-white.png'
 
 import { FaLinkedin } from 'react-icons/fa'
 import { RiInstagramFill, RiGithubFill } from 'react-icons/ri'
+import FormContact from './FormContact'
 
 
 export default function Contact() {
@@ -20,7 +20,7 @@ export default function Contact() {
                 initial='hidden'
                 whileInView='show'
                 viewport={{ once: true }}
-                className='bg-white border-none outline-none opacity-30 w-[60rem] h-[.5px] absolute right-[40%] top-[50%]' />
+                className='bg-white border-none outline-none opacity-30 w-[60rem] h-[.5px] absolute right-[40%] top-[35%]' />
 
             <motion.hr
                 variants={slideIn('up', 0.5, 0.8)}
@@ -143,7 +143,7 @@ export default function Contact() {
                     </motion.div>
                 </div>
 
-                <div></div>
+                <FormContact />
             </div>
 
             <p className='text-center text-white mb-[5rem]'>© Copyright {new Date().getFullYear()} Alvin Irwanto  |  All Rights Reserved</p>

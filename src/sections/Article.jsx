@@ -9,11 +9,9 @@ export default function Article() {
 
     async function fetchData() {
         try {
-            const response = await axios.get('https://v1.nocodeapi.com/alvinirwanto/medium/wuoouXLPFNSxiVbE')
-            const data = response?.data;
+            const response = await axios.get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@irwantoalvin')
+            const data = response?.data?.items;
             setArticles(data);
-
-
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -42,15 +40,15 @@ export default function Article() {
                                             const firstImg = doc?.querySelector('img')?.getAttribute('src');
                                             return firstImg
                                                 ? <div className='relative h-[70%]'>
-                                                    <Image className='w-full h-full object-cover absolute bg-clip-content p-4 md:p-6 border-2 border-blue-primary rounded-lg' src={firstImg} height={500} width={500} alt='thumbnail' />
-                                                    <div className={`w-full h-full bg-gradient-to-l from-[#61dcfb4b] to-transparent absolute rounded-lg`}></div>
+                                                    <Image className='w-full h-full object-cover absolute bg-clip-content p-4 md:p-6 border-2 border-blue-primary' src={firstImg} height={500} width={500} alt='thumbnail' />
+                                                    <div className={`w-full h-full bg-gradient-to-l from-[#61dcfb4b] to-transparent absolute`}></div>
                                                 </div>
                                                 : null;
                                         })()}
                                     </>
                                 )}
                                 <div className='flex flex-col gap-4'>
-                                    <span className='font-semibold text-xl line-clamp-2'>{article.title}</span>
+                                    <span className='font-semibold text-xl line-clamp-3'>{article.title}</span>
                                     {article.content && (
                                         <>
                                             {(() => {
@@ -67,7 +65,7 @@ export default function Article() {
                                     )}
                                     <div className='flex justify-start gap-6'>
                                         {
-                                            article?.category?.map((category, i) => (
+                                            article?.categories?.map((category, i) => (
                                                 <div key={i} className='text-blue-primary capitalize text-xs md:text-lg'>{category}</div>
                                             ))
                                         }
@@ -90,8 +88,8 @@ export default function Article() {
                                             const firstImg = doc?.querySelector('img')?.getAttribute('src');
                                             return firstImg
                                                 ? <div className='relative h-full'>
-                                                    <Image className='w-full h-full object-cover absolute bg-clip-content p-2 md:p-4 border-2 border-blue-primary rounded-lg' src={firstImg} height={500} width={500} alt='thumbnail' />
-                                                    <div className={`w-full h-full bg-gradient-to-l from-[#61dcfb4b] to-transparent absolute rounded-lg`}></div>
+                                                    <Image className='w-full h-full object-cover absolute bg-clip-content p-2 md:p-4 border-2 border-blue-primary' src={firstImg} height={500} width={500} alt='thumbnail' />
+                                                    <div className={`w-full h-full bg-gradient-to-l from-[#61dcfb4b] to-transparent absolute`}></div>
                                                 </div>
                                                 : null;
                                         })()}
@@ -117,7 +115,7 @@ export default function Article() {
                                     </div>
                                     <div className='flex justify-between'>
                                         {
-                                            article?.category?.map((category, i) => (
+                                            article?.categories?.map((category, i) => (
                                                 <div key={i} className={`${i >= 3 ? 'hidden': 'text-blue-primary text-xs md:text-sm xl:text-base capitalize'}`}>{category}</div>
                                             ))
                                         }

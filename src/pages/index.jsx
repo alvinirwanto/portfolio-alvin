@@ -8,6 +8,7 @@ import Work from '@/sections/Work'
 
 import { Montserrat } from 'next/font/google'
 import Contact from '@/sections/Contact'
+import ToasterProvider from '@/components/ToasterProvider'
 
 const montserrat = Montserrat({
     subsets: ['latin'],
@@ -20,6 +21,7 @@ export default function Home() {
     return (
         <div className={`${montserrat.className} h-screen grid place-items-center`}>
             <Background />
+            <ToasterProvider />
             <div className="w-[95%] h-[95vh] md:w-[90%] xl:h-[90vh] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                 <Navbar />
                 <div className='relative'>
