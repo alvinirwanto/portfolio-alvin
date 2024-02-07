@@ -40,7 +40,7 @@ export default function Contact() {
                                 initial='hidden'
                                 whileInView='show'
                                 viewport={{ once: true }}
-                                className='text-2xl font-semibold text-blue-primary'>Contact Me</motion.h2>
+                                className='text-lg md:text-2xl font-semibold text-blue-primary'>Contact Me</motion.h2>
                         </div>
 
                         <div className="overflow-hidden">
@@ -49,7 +49,7 @@ export default function Contact() {
                                 initial='hidden'
                                 whileInView='show'
                                 viewport={{ once: true }}
-                                className='text-9xl font-bold'>Let's Talk</motion.p>
+                                className='text-7xl md:text-8xl xl:text-9xl font-bold'>Let's Talk</motion.p>
                         </div>
                     </div>
 
@@ -66,7 +66,7 @@ export default function Contact() {
                             initial='hidden'
                             whileInView='show'
                             viewport={{ once: true }}
-                            className='text-xl'>I am looking forward to start a great project with you.</motion.p>
+                            className='text-lg md:text-xl'>I am looking forward to start a great project with you.</motion.p>
                     </div>
 
                     <motion.div
@@ -84,13 +84,13 @@ export default function Contact() {
                     </motion.div>
                 </div>
 
-                <div className='flex flex-col gap-2 mt-[5rem]'>
+                <div className='hidden md:flex flex-col gap-2 mt-[5rem]'>
                     <motion.p
                         variants={slideIn('left', 0.5, 0.8)}
                         initial='hidden'
                         whileInView='show'
                         viewport={{ once: true }}
-                        className='text-2xl mt-8 font-bold'>
+                        className='text-xl md:text-2xl mt-8 font-bold'>
                         My Location
                     </motion.p>
 
@@ -99,14 +99,14 @@ export default function Contact() {
                         initial='hidden'
                         whileInView='show'
                         viewport={{ once: true }}
-                        className='xl:max-w-[400px]'>Kunciran Indah, Pinang, Kota Tangerang, Banten, Indonesia. 15144</motion.p>
+                        className='text-sm md:text-base xl:max-w-[400px]'>Kunciran Indah, Pinang, Kota Tangerang, Banten, Indonesia. 15144</motion.p>
 
                     <motion.div
                         variants={staggerAnimation()}
                         initial='hidden'
                         whileInView='show'
                         viewport={{ once: true }}
-                        className='flex justify-between md:justify-start items-center gap-4 text-blue-primary mt-[3rem] xl:mt-4'>
+                        className='flex justify-start items-center gap-4 text-blue-primary mt-[3rem] xl:mt-4'>
                         <motion.div
                             variants={staggerItems('left')}
                         >
@@ -144,6 +144,65 @@ export default function Contact() {
                 </div>
 
                 <FormContact />
+
+                <div className='flex md:hidden flex-col gap-2 mb-[5rem]'>
+                    <motion.p
+                        variants={slideIn('left', 0.5, 0.8)}
+                        initial='hidden'
+                        whileInView='show'
+                        viewport={{ once: true }}
+                        className='text-xl md:text-2xl mt-8 font-bold'>
+                        My Location
+                    </motion.p>
+
+                    <motion.p
+                        variants={slideIn('left', 0.5, 0.8)}
+                        initial='hidden'
+                        whileInView='show'
+                        viewport={{ once: true }}
+                        className='text-sm md:text-base xl:max-w-[400px]'>Kunciran Indah, Pinang, Kota Tangerang, Banten, Indonesia. 15144</motion.p>
+
+                    <motion.div
+                        variants={staggerAnimation()}
+                        initial='hidden'
+                        whileInView='show'
+                        viewport={{ once: true }}
+                        className='flex justify-start items-center gap-4 text-blue-primary mt-[3rem] xl:mt-4'>
+                        <motion.div
+                            variants={staggerItems('left')}
+                        >
+                            <Link
+                                href='https://github.com/alvinirwanto'
+                                className='duration-200 hover:opacity-60'
+                            >
+                                <RiGithubFill className='text-3xl xl:text-2xl' />
+                            </Link>
+                        </motion.div>
+
+
+                        <motion.div
+                            variants={staggerItems('left')}
+                        >
+                            <Link
+                                href='https://www.instagram.com/alvinirwanto/'
+                                className='duration-200 hover:opacity-60'
+                            >
+                                <RiInstagramFill className='text-3xl xl:text-2xl' />
+                            </Link>
+                        </motion.div>
+
+                        <motion.div
+                            variants={staggerItems('left')}
+                        >
+                            <Link
+                                href='https://www.linkedin.com/in/alvin-irwanto/'
+                                className='duration-200 hover:opacity-60'
+                            >
+                                <FaLinkedin className='text-3xl xl:text-2xl' />
+                            </Link>
+                        </motion.div>
+                    </motion.div>
+                </div>
             </div>
 
             <p className='text-center text-white mb-[5rem]'>© Copyright {new Date().getFullYear()} Alvin Irwanto  |  All Rights Reserved</p>

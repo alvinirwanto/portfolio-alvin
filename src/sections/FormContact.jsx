@@ -66,7 +66,7 @@ export default function FormContact() {
 
     return (
         <div className='w-full flex justify-end my-[5rem]'>
-            <form className='w-[90%] flex flex-col gap-4' onSubmit={handleSubmit(onHandleFormSubmit)}>
+            <form className='w-full md:w-[90%] flex flex-col gap-4' onSubmit={handleSubmit(onHandleFormSubmit)}>
                 {
                     listInputs.map((input, i) => {
                         return input.id === 'message'
