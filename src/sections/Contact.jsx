@@ -143,7 +143,7 @@ export default function Contact() {
                     </motion.div>
                 </div>
 
-                <FormContact />
+                {/* <FormContact /> */}
 
                 <div className='flex md:hidden flex-col gap-2 mb-[5rem]'>
                     <motion.p
