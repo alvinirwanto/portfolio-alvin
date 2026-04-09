@@ -13,6 +13,7 @@ const nextConfig = {
                 dns: false,
                 net: false,
                 tls: false,
+                child_process: false, // Add this line
             };
         }
         return config;
