@@ -6,6 +6,110 @@ import OtherWork from './OtherWork'
 
 const works = [
     {
+        image: '/work/pnm/portal.png',
+        title: 'Portal',
+        review: "This web portal functions as an integrated platform that serves as the main gateway for accessing various connected applications within it. The portal is designed to manage authorized users by providing authentication features such as login, password change, and password reset. In addition, the portal facilitates access to internal applications based on user roles and permissions. This setup ensures that only authorized users can access the web system, thereby improving efficiency and security in managing the company's information systems.",
+        tech: [
+            'React JS',
+            'Tailwind CSS',
+            'Zustand',
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+
+    {
+        image: '/work/pnm/cap.png',
+        title: 'Culture Activation Program',
+        review: 'This Web CAP serves as an internalization program aimed at accelerating business achievement targets in alignment with cultural programs at PNM, which are implemented simultaneously across all PNM branches. The available menu includes a dashboard, profile data and monthly reports, management approval, as well as user and branch management.',
+        tech: [
+            'React JS',
+            'Tailwind CSS',
+            'Zustand',
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+
+    {
+        image: '/work/pnm/onboarding.png',
+        title: 'Onboarding',
+        review: 'The AO Onboarding Web functions to monitor the internship activities of AOs. This web application consists of several menus displayed according to roles that have been predefined. The available menus include a dashboard, AO internship attendance (which contains a form to record attendance and activities performed), an internship list, and user management.',
+        tech: [
+            'React JS',
+            'Tailwind CSS',
+            'Zustand',
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+
+    {
+        image: '/work/pnm/ifest.png',
+        title: 'IFest',
+        review: 'The IFEST Web is an innovative program that invites all PNM employees to create creative solutions for current issues. Using a bottom-up approach, this program aims to enhance competitiveness and efficiency through employee participation in developing new products and services, while also strengthening a culture of innovation in the ultra-micro industry and Indonesia’s digital ecosystem.',
+        tech: [
+            'React JS',
+            'Tailwind CSS',
+            'Zustand',
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+
+    {
+        image: '/work/pnm/ems.png',
+        title: 'EMS',
+        review: 'EMS is a web-based application used to support the process of submitting, approving, and managing activities or events. This application enables users to propose event plans, carry out structured approval processes, and prepare as well as manage activity accountability reports in a systematic and well-documented manner.',
+        tech: [
+            'React JS',
+            'Tailwind CSS',
+            'Zustand',
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+
+    {
+        image: '/work/pnm/itms.png',
+        title: 'ITMS',
+        review: 'ITMS is a web-based application designed to support the management of employee promotions within career development pathways. This application facilitates the submission of employee candidates proposed for promotion, the assignment of tasks or evaluations that must be completed by the respective employees, and the assessment process by supervisors or managers as a basis for determining promotion eligibility.',
+        tech: [
+            'React JS',
+            'Tailwind CSS',
+            'Zustand',
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+
+    {
+        image: '/work/pnm/pkm.png',
+        title: 'Kegiatan Simulasi Bisnis (PKM)',
+        review: 'The Business Process Simulation Application is a web-based application designed to monitor and manage the daily activities of PKM, including attendance tracking, documentation of activities performed, and management of work targets assigned to each employee. The application is also equipped with an approval feature for activities that have been carried out by employees, enabling monitoring, evaluation, and performance control processes to be conducted in a more structured, accurate, and well-documented manner.',
+        tech: [
+            'React JS',
+            'Tailwind CSS',
+            'Zustand',
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+
+    {
+        image: '/work/pnm/beasiswa.png',
+        title: 'Beasiswa',
+        review: 'The Scholarship Application is designed to support the scholarship application process for PNM employees. At its current stage of development, the application is focused on the creation and management of master data, including participant data, university data, and registration period settings. In the future, this application is expected to become an integrated platform for managing employee scholarship programs in a systematic, transparent, and well-documented manner.',
+        tech: [
+            'React JS',
+            'Tailwind CSS',
+            'Zustand',
+        ],
+        linkweb: '',
+        linkgit: ''
+    },
+
+    {
         image: '/work/pd-mercubuana.png',
         title: 'Pangkalan Data Universitas Mercu Buana',
         review: 'This website serves as a data resource for Universitas Mercu Buana, housing confidential data that is not readily disclosed. It features a robust User Authentication system, designed to assign roles and manage access rights. Additionally, it employs Iframe technology to seamlessly integrate PowerBI, thereby facilitating the display of data in a visually engaging and informative manner.',
@@ -63,7 +167,7 @@ export default function Work() {
                 <div className='bg-white-primary w-[25%] h-[2px] z-[20]' />
             </div>
             <div className='flex justify-end text-end mt-8'>
-                <p className='md:max-w-[40vw] xl:max-w-[10vw] text-blue-primary'>Here are the projects I've developed in my role as a Frontend Web Developer:</p>
+                <p className='md:max-w-[40vw] xl:max-w-[25vw] text-blue-primary'>Here are the projects I've developed in my role as a Frontend Web Developer:</p>
             </div>
 
 
@@ -87,7 +191,7 @@ export default function Work() {
                                 <div className='flex xl:hidden gap-4'>
                                     {
                                         work.linkgit && (
-                                            <Link href='' target='_blank'>
+                                            <Link href={work.linkgit} target='_blank'>
                                                 <RiGithubLine className='hover:text-blue-primary duration-300 text-xl' />
                                             </Link>
                                         )
@@ -95,7 +199,7 @@ export default function Work() {
 
                                     {
                                         work.linkweb && (
-                                            <Link href='' target='_blank'>
+                                            <Link href={work.linkweb} target='_blank'>
                                                 <RiExternalLinkLine className='hover:text-blue-primary duration-300 text-2xl' />
                                             </Link>
                                         )
@@ -116,7 +220,7 @@ export default function Work() {
                                 <div className='hidden xl:flex gap-4'>
                                     {
                                         work.linkgit && (
-                                            <Link href='' target='_blank'>
+                                            <Link href={work.linkgit} target='_blank'>
                                                 <RiGithubLine className='hover:text-blue-primary duration-300 text-3xl' />
                                             </Link>
                                         )
@@ -124,7 +228,7 @@ export default function Work() {
 
                                     {
                                         work.linkweb && (
-                                            <Link href='' target='_blank'>
+                                            <Link href={work.linkweb} target='_blank'>
                                                 <RiExternalLinkLine className='hover:text-blue-primary duration-300 text-3xl' />
                                             </Link>
                                         )

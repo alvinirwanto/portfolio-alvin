@@ -22,6 +22,19 @@ export default function Experience() {
 
     const experiences = [
         {
+            name: "Lawencon Internasional",
+            role: "Front-end Web Developer",
+            url: "https://www.lawencon.com/",
+            start: "March 2024",
+            end: "Now",
+            shortDescription: [
+                "Created frontend of the website based on the UI/UX",
+                "Connected the Frontend and the Backend using API",
+                "Created Dockerfile for Deploy",
+                "Maintaining and Editing client website that already exist."
+            ],
+        },
+        {
             name: "MX Indonesia",
             role: "Full-Stack Web Developer",
             url: "https://www.mxindonesia.com",
@@ -36,18 +49,6 @@ export default function Experience() {
                 "I've also experience managed a small team that includes Frontend Developers, Designer, and Content Writer in Creative Team."
             ],
         },
-        // {
-        //     name: "Instagram",
-        //     role: "Content Creator",
-        //     url: "https://www.mxindonesia.com",
-        //     start: "May 2023",
-        //     end: "Present",
-        //     shortDescription: [
-        //         "Upon graduating in 2021, I began creating content on YouTube, with the aim of enhancing my skills and working with the latest technologies, specifically React and Node.",
-        //         "Over time, I have developed and shared over 50 projects using React on my channel.",
-        //         "As a result, my channel has gained a substantial following, with over 11,000 subscribers to date. I have also had the pleasure of collaborating with various brands throughout my journey.",
-        //     ],
-        // },
         {
             name: "MX Indonesia",
             role: "Web Developer [Intern]",

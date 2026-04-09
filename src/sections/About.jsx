@@ -1,4 +1,4 @@
-import Background from '@/components/Background'
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
 
@@ -19,10 +19,10 @@ const techs = [
         link: '/logo/wordpress.png',
         name: 'wordpress'
     },
-    {
-        link: '/logo/sass-1.png',
-        name: 'sass'
-    },
+    // {
+    //     link: '/logo/sass-1.png',
+    //     name: 'sass'
+    // },
     {
         link: '/logo/react.png',
         name: 'react'
@@ -52,6 +52,11 @@ const techs = [
     {
         link: '/logo/mongodb-1.png',
         name: 'mongodb'
+    },
+    {
+        link: '/logo/tanstack-white.svg',
+        link2: '/logo/tanstack-black.svg',
+        name: 'tanstack'
     },
 ]
 
@@ -91,17 +96,23 @@ export default function About() {
                         {
                             techs.map((tech, i) => (
                                 <div key={i} className='group border-r-[1px] border-b-[1px] border-white-secondary py-8 flex justify-center items-center relative grayscale hover:grayscale-0 cursor-crosshair'>
+
                                     <Image
-                                        className={`w-8 md:w-[3rem] aspect-square ${tech.name === 'next js' || tech.name === 'github' ? 'group-hover:hidden' : ''}`}
+                                        className={cn(
+                                            'w-8 md:w-[3rem] aspect-square',
+                                            (tech.name === 'next js' || tech.name === 'github' || tech.name === 'tanstack') 
+                                            ? 'group-hover:hidden' : '',
+                                            tech.name === 'tanstack' && 'scale-150'
+                                        )}
                                         height={500}
                                         width={500}
                                         src={tech.link}
                                     />
 
                                     {
-                                        tech.name === 'next js' || tech.name === 'github' ?
+                                        tech.name === 'next js' || tech.name === 'github' || tech.name === 'tanstack' ?
                                             <Image
-                                                className='w-8 md:w-[3rem] aspect-square hidden group-hover:block'
+                                                className={cn('w-8 md:w-[3rem] aspect-square hidden group-hover:block', tech.name === 'tanstack' && 'scale-150')}
                                                 height={300}
                                                 width={300}
                                                 src={tech.link2}

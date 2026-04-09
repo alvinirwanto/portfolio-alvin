@@ -1,6 +1,4 @@
-import { Montserrat } from 'next/font/google'
 import React from 'react'
-import Background from '../components/Background'
 
 export default function Hero() {
     return (
